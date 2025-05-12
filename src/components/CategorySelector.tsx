@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
+import RidesSection from "./Carousel";
 
 function CategorySelector() {
   const [rideCategory, setRideCategory] = React.useState({
@@ -31,8 +32,8 @@ function CategorySelector() {
   ];
   return (
     <>
-      <div className="grid grid-cols-3 mt-32">
-        <div className="absolute">
+      <div className="grid grid-cols-4 mt-32">
+        <div>
           <div
             className={`relative -left-[22rem] w-[40rem] h-[40rem] rounded-full transition-all ease-in duration-500 ${
               rideCategory.name === "Land"
@@ -70,7 +71,12 @@ function CategorySelector() {
                   <span className="text-xl text-white">{item.name}</span>
                   <br />
                   <span className="text-sm bg-[#788BEB] text-white px-2 py-1 rounded-xl">
-                    74 rides
+                    {item.name === "Land"
+                      ? "74"
+                      : item.name === "Water"
+                      ? "55"
+                      : "36"}{" "}
+                    rides
                   </span>
                 </div>
               </div>
@@ -78,7 +84,17 @@ function CategorySelector() {
           </div>
           <div className=" relative -top-[35rem] -left-[18rem] bg-[#22304a] w-[30rem] h-[30rem] rounded-full"></div>
         </div>
-        <div className="col-span-2"></div>
+        <div className="col-span-3">
+          <RidesSection
+            activeCategory={
+              rideCategory.name === "Land"
+                ? 0
+                : rideCategory.name === "Water"
+                ? 1
+                : 2
+            }
+          />
+        </div>
       </div>
     </>
   );

@@ -3,3 +3,54 @@
 body {
   background: #22304a;
 }
+
+.slick-prev:before,
+.slick-next:before {
+  display: none;
+}
+
+.aspect-video {
+  aspect-ratio: 16 / 9;
+}
+
+.aspect-\[3\/5\] {
+  aspect-ratio: 3 / 5;
+}
+
+.slick-list {
+  overflow: visible !important;
+  margin: 0 -12px;
+}
+
+.slick-slide > div {
+  margin: 0 12px;
+  height: 100%;
+}
+
+.slick-slide video {
+  pointer-events: none;
+}
+
+.slick-active video {
+  pointer-events: auto;
+}
+
+.ride-card {
+  transition: all 0.3s ease;
+  transform: scale(0.98);
+  height: 100%;
+}
+
+.slick-active .ride-card {
+  transform: scale(1);
+}
+
+.slick-current .ride-card {
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.slick-current .ride-card {
+  transform: scale(1.02);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
