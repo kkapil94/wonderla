@@ -20,7 +20,7 @@ const rides = [
       description:
         "Perfect for first time thrill-seekers, this takes you on a spin with sudden drops and bursts of speed that will leave you wanting more!",
       videoUrl:
-        "https://d22pimhl2qmbj7.cloudfront.net/public/Wonderla_Bamba_480p.mp4",
+        "https://d22pimhl2qmbj7.cloudfront.net/public/Wonderla_Bamba_480p_51837c9805.mp4",
     },
     {
       name: "Space Gun",
@@ -166,7 +166,7 @@ const RidesCarousel = ({ activeCategory = 0 }) => {
       className="absolute top-[-70px] right-[60px] z-10 w-11 h-11 flex items-center justify-center bg-yellow-400 rounded-full hover:bg-yellow-500 focus:outline-none shadow-md"
       onClick={onClick}
     >
-      <ChevronLeft className="text-gray-900" size={22} />
+      <ChevronLeft className="text-[#334dcf]" size={22} />
     </button>
   );
 
@@ -175,7 +175,7 @@ const RidesCarousel = ({ activeCategory = 0 }) => {
       className="absolute top-[-70px] right-0 z-10 w-11 h-11 flex items-center justify-center bg-yellow-400 rounded-full hover:bg-yellow-500 focus:outline-none shadow-md"
       onClick={onClick}
     >
-      <ChevronRight className="text-gray-900" size={22} />
+      <ChevronRight className="text-[#334dcf]" size={22} />
     </button>
   );
 
@@ -231,9 +231,9 @@ const RidesCarousel = ({ activeCategory = 0 }) => {
   }, [activeCategory]);
 
   return (
-    <div className="w-full bg-[#22304a] py-8 text-white overflow-hidden">
-      <div className="max-w-6xl mx-auto px-4 relative">
-        <h2 className="text-5xl font-bold mb-14 text-white tracking-wide ml-4">
+    <div className=" bg-[#22304a] ml-[-5rem] py-8 text-white overflow-hidden">
+      <div className=" mx-auto px-4 relative">
+        <h2 className="text-5xl font-extrabold mb-14 text-white tracking-wide ml-4">
           OUR ICONIC RIDES
         </h2>
 
@@ -241,7 +241,7 @@ const RidesCarousel = ({ activeCategory = 0 }) => {
           <Slider ref={sliderRef} {...settings}>
             {currentRides.map((ride, index) => (
               <div key={index} className="px-3 h-full">
-                <div className="overflow-hidden rounded-lg relative h-full shadow-xl ride-card bg-gray-900">
+                <div className="overflow-hidden rounded-3xl relative h-full shadow-xl ride-card bg-gray-900">
                   <div className="aspect-[3/5] relative overflow-hidden rounded-lg">
                     <video
                       src={ride.videoUrl}
@@ -266,7 +266,7 @@ const RidesCarousel = ({ activeCategory = 0 }) => {
 
                         <a
                           href={ride.href}
-                          className="inline-block w-full bg-yellow-400 text-black font-semibold text-sm px-4 py-2 rounded hover:bg-yellow-500 transition text-center"
+                          className="flex w-[60%] h-12 text-[#334dcf] bg-yellow-400 font-extrabold text-sm px-4 py-2 rounded-xl hover:bg-yellow-500 transition  justify-center items-center"
                         >
                           RIDE DETAILS
                         </a>
@@ -279,10 +279,10 @@ const RidesCarousel = ({ activeCategory = 0 }) => {
           </Slider>
         </div>
 
-        <div className="mt-14 flex justify-center">
+        <div className="mt-14 pl-4">
           <a
             href="/rides"
-            className="bg-yellow-400 text-black px-10 py-3 rounded-full font-bold text-lg hover:bg-yellow-500 transition-colors shadow-md"
+            className="bg-yellow-400 text-[#334dcf] px-10 py-3 rounded-full font-extrabold text-lg hover:bg-yellow-500 transition-colors shadow-md"
           >
             Explore All Rides!
           </a>

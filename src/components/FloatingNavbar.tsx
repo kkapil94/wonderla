@@ -132,7 +132,7 @@ const FloatingNavbar = () => {
         </div>
 
         <div className="flex items-center">
-          <button className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-6 rounded-lg flex items-center transition-colors">
+          <button className="bg-yellow-400 hover:bg-yellow-500 text-[#334dcf] font-bold py-2 px-6 rounded-lg flex items-center transition-colors">
             BOOK TICKETS
             <svg
               className="w-5 h-5 ml-2"
