@@ -4,6 +4,19 @@ body {
   background: #22304a;
 }
 
+/* Fix for first slide visibility */
+.slick-slider {
+  width: 100%;
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+}
+
+.slick-track {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
 .slick-prev:before,
 .slick-next:before {
   display: none;
@@ -18,12 +31,13 @@ body {
 }
 
 .slick-list {
-  overflow: visible !important;
-  margin: 0 -12px;
+  overflow: hidden !important;
+  margin: 0;
+  padding: 0 !important;
 }
 
 .slick-slide > div {
-  margin: 0 12px;
+  margin: 0 8px;
   height: 100%;
 }
 
@@ -39,6 +53,7 @@ body {
   transition: all 0.3s ease;
   transform: scale(0.98);
   height: 100%;
+  width: 100%;
 }
 
 .slick-active .ride-card {
@@ -46,11 +61,6 @@ body {
 }
 
 .slick-current .ride-card {
-  transform: scale(1.03);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-}
-
-.slick-current .ride-card {
-  transform: scale(1.02);
+  /* transform: scale(1.02); */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
