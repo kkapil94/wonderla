@@ -152,11 +152,16 @@ const rides = [
   ],
 ];
 
+interface ArrowProps {
+  onClick?: () => void;
+  className?: string;
+}
+
 const RidesCarousel = ({ activeCategory = 0 }) => {
   const [currentCategory, setCurrentCategory] = useState(activeCategory);
   const sliderRef = useRef(null);
 
-  const PrevArrow = ({ onClick }: any) => (
+  const PrevArrow = ({ onClick }: ArrowProps) => (
     <button
       className="absolute top-[-70px] right-[60px] z-10 w-11 h-11 flex items-center justify-center bg-yellow-400 rounded-full hover:bg-yellow-500 focus:outline-none shadow-md"
       onClick={onClick}
@@ -165,7 +170,7 @@ const RidesCarousel = ({ activeCategory = 0 }) => {
     </button>
   );
 
-  const NextArrow = ({ onClick }: any) => (
+  const NextArrow = ({ onClick }: ArrowProps) => (
     <button
       className="absolute top-[-70px] right-0 z-10 w-11 h-11 flex items-center justify-center bg-yellow-400 rounded-full hover:bg-yellow-500 focus:outline-none shadow-md"
       onClick={onClick}

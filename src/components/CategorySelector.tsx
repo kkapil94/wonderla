@@ -52,6 +52,7 @@ function CategorySelector() {
                   "relative w-[13rem] h-[5rem] rounded-full  flex justify-between items-center " +
                   item.classes
                 }
+                key={item.name}
                 onClick={() => setRideCategory(item)}
               >
                 <div

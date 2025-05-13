@@ -8,7 +8,7 @@ import { navItems, cities } from "@/data";
 const FloatingNavbar = () => {
   const [isLocationMenuOpen, setIsLocationMenuOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [hoveredCity, setHoveredCity] = useState<string | null>(null);
+  // const [hoveredCity, setHoveredCity] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -91,12 +91,7 @@ const FloatingNavbar = () => {
               <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl py-2 z-10">
                 <div className="grid grid-cols-1 gap-2 p-3">
                   {cities.map((city) => (
-                    <div
-                      key={city.name}
-                      className="relative"
-                      onMouseEnter={() => setHoveredCity(city.name)}
-                      onMouseLeave={() => setHoveredCity(null)}
-                    >
+                    <div key={city.name} className="relative">
                       <Link
                         href={"/"}
                         className="flex items-center p-2 rounded-lg hover:bg-gray-100"
